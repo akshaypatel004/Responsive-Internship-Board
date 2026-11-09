@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore and search internship opportunities.">
+    <title>InternHub | Internship Board</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <a class="logo" href="#">InternHub</a>
+            <span>Find your next opportunity</span>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <section class="hero">
+            <h1>Find Your Perfect Internship</h1>
+            <p>Explore opportunities, develop your skills and build your career.</p>
+        </section>
+
+        <section class="filters" aria-label="Search and filter internships">
+
+            <div class="filter-group">
+                <label for="searchInput">Search internships</label>
+                <input type="search" id="searchInput" placeholder="Search title or skills...">
+            </div>
+
+            <div class="filter-group">
+                <label for="domainFilter">Select domain</label>
+                <select id="domainFilter">
+                    <option value="">All Domains</option>
+                    <option value="Full Stack Development">Full Stack Development</option>
+                    <option value="UI/UX">UI/UX</option>
+                    <option value="Data Analytics">Data Analytics</option>
+                    <option value="Cyber Security">Cyber Security</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="modeFilter">Work mode</label>
+                <select id="modeFilter">
+                    <option value="">All Modes</option>
+                    <option value="Remote">Remote</option>
+                    <option value="Hybrid">Hybrid</option>
+                    <option value="On-site">On-site</option>
+                </select>
+            </div>
+
+        </section>
+
+        <section class="results-section">
+
+            <div class="results-heading">
+                <h2>Available Internships</h2>
+                <p id="resultCount" aria-live="polite"></p>
+            </div>
+
+            <p id="loadingMessage" role="status">Loading internships...</p>
+
+            <div id="errorMessage" role="alert" hidden>
+                <p>Unable to load internship records.</p>
+                <button id="retryButton" type="button">Try Again</button>
+            </div>
+
+            <div id="internshipContainer" class="internship-grid"></div>
+
+            <p id="emptyMessage" role="status" hidden>
+                No internships found. Try changing your search or filters.
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 InternHub. Internship Board Project.</p>
+    </footer>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
